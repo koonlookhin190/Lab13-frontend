@@ -3,5 +3,5 @@ export default reactive({
   flashMessage: '',
   event: null,
   organizers: null,
-  currentUser: null
+  currentUser: JSON.parse(localStorage.getItem('user'))
 })
