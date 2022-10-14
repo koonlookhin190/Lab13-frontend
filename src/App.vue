@@ -4,7 +4,7 @@
   </div>
   <div id="nav">
     <nav class="navbar navbar-expand">
-      <ul v-if="!currentUser" class="navbar-nav ml-auto">
+      <ul v-if="!GStore.currentUser" class="navbar-nav ml-auto">
         <li class="nav-item">
           <router-link to="/register" class="nav-link">
             <font-awesome-icon icon="user-plus" /> Sign Up
@@ -16,11 +16,11 @@
           </router-link>
         </li>
       </ul>
-      <ul v-if="currentUser" class="navbar-nav ml-auto">
+      <ul v-if="GStore.currentUser" class="navbar-nav ml-auto">
         <li class="nav-item">
           <router-link to="/profile" class="nav-link">
             <font-awesome-icon icon="user" />
-            {{ currentUser.name }}
+            {{ GStore.currentUser.name }}
           </router-link>
         </li>
         <li class="nav-item">
