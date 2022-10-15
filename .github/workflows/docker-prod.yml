@@ -29,12 +29,12 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/se331-frontend:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/se331-lab13-frontend:latest
       -
         name: composing
         run: |
-          mkdir transmatter-frontend
-          cp docker-compose.yml transmatter-frontend/docker-compose.yml
-          cd transmatter-frontend
+          mkdir se331-lab13-frontend
+          cp docker-compose.yml se331-lab13-frontend/docker-compose.yml
+          cd se331-lab13-frontend
           docker-compose -H ${{ secrets.HOST_SERVER }} pull
           docker-compose -H ${{ secrets.HOST_SERVER }} up -d 
